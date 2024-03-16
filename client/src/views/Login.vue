@@ -77,7 +77,6 @@ const login = async () => {
   }
 }
 
-
 </script>
 
 <style scoped>
@@ -243,8 +242,8 @@ button:hover {
 
   .login-right img {
     width: 90%;
-  margin-left: 6%;
-  margin-top: 10%;
+    margin-left: 6%;
+    margin-top: 10%;
   }
 
   .headImg img {
@@ -255,5 +254,4 @@ button:hover {
     filter: drop-shadow(3px 1px 3px #1E3050);
   }
 }
-
 </style>
