@@ -3,7 +3,7 @@
     <div class="wrapper">
       <nav >
         <RouterLink to="/">
-        <img src="../assets/images/conn.png" alt="logo" />
+        <img src="../assets/images/logo3.png" alt="logo" />
         </RouterLink>
         <div class="right">
         <button @click="logout">Logout</button>

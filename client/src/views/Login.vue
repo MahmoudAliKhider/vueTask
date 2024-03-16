@@ -1,9 +1,6 @@
 <template>
   <div class="login-container">
 
-    <div class="headImg">
-      <img src="../assets/images/conn.png" alt="l" />
-    </div>
     <div class="container">
 
       <div class="login-left">
@@ -106,13 +103,7 @@ const login = async () => {
 
 }
 
-.headImg img {
-  width: 140px;
-  position: absolute;
-  left: 13%;
-  top: 15%;
-  filter: drop-shadow(3px 1px 3px #1E3050);
-}
+
 
 .hed h2 {
   margin-bottom: 20px;
