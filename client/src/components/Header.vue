@@ -30,33 +30,31 @@ const logout = () => {
 
 <style scoped>
 header {
-  background-color: #110F24;
+  background-color: #14134F;
   color: white;
-  /* padding: .2rem; */
+  padding: .2rem;
+  padding-top: .5rem;
   width: 100%;
 }
 
-.right{
-   position: relative;
-   left: 140%;
-   display: flex;
-}
+
 .right button{
     border: 1px solid #fff;
-    border-radius: 8px;
+    border-radius: 18px;
     height: 40px;
     padding: 0px 20px;
     cursor: pointer;
 }
 nav {
   display: flex;
-  width: 60%;
+  width: 95%;
   align-items: center;
   margin-left: 20px;
+  justify-content: space-between;
 }
 
 nav img{
-  width: 90px;
+  width: 120px;
 }
 nav a {
   color: white;
@@ -68,4 +66,5 @@ nav a {
   color: #110F24;
   border-radius: 30px;
 } */
+
 </style>
