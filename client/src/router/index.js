@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Register from '../views/Register.vue'
 import Login from '../views/Login.vue'
 import Games from '../components/Games.vue'
+import PageNotFound from '../components/PageNotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/games',
       name: 'games',
       component: Games
+    },
+    {
+      path: '/:catchAll(.*)', 
+      name: 'PageNotFound',
+      component: PageNotFound 
     }
   ]
 })

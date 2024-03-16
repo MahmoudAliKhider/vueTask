@@ -162,7 +162,6 @@ loadData();
 }
 
 @media screen and (max-width: 1200px) {
-    /* Adjust styles for smaller screens */
     .games-row {
         padding: 20px;
     }
@@ -173,7 +172,6 @@ loadData();
 }
 
 @media screen and (max-width: 768px) {
-    /* Further adjust styles for even smaller screens */
     .games-row {
         padding: 10px;
     }
