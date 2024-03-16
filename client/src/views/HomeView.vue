@@ -54,9 +54,7 @@ const loadData = async () => {
         console.error("Error fetching games:", error);
     }
 }
-
 const games = ref([]);
-
 loadData();
 </script>
 
@@ -67,7 +65,7 @@ loadData();
             <Header />
         </div>
         <div class="homeContainer">
-            <img src="../assets/images/banar2.jpg" alt="j" />
+            <img src="../assets/images/conn3.jpg" alt="j" />
             <div class="homeText">
                 <h1>CONNECT Professional Services</h1>
                 <p>CONNECT Professional Services, founded in 2009, aims to be a leading IT services provider emphasizing
@@ -124,7 +122,7 @@ loadData();
 
 <style scoped>
 .homeContainer {
-    height: 85vh;
+    height: 88vh;
     width: 100%;
     overflow: hidden;
 }
@@ -271,7 +269,6 @@ loadData();
 }
 
 @media screen and (max-width: 1200px) {
-    /* Adjust styles for smaller screens */
     .games-row {
         padding: 20px;
     }
@@ -282,7 +279,6 @@ loadData();
 }
 
 @media screen and (max-width: 768px) {
-    /* Further adjust styles for even smaller screens */
     .games-row {
         padding: 10px;
     }
