@@ -1,6 +1,7 @@
 <template>
     <div class="con">
-        <h1>Top Games</h1>
+       <RouterLink to="/"> <h1>Top Games</h1></RouterLink>
+
         <div v-if="loading">Loading...</div>
         <div v-else>
             <div class="games-row">
@@ -19,6 +20,7 @@
 
 <script>
 import axios from "axios";
+import { RouterLink } from 'vue-router';
 
 export default {
     name: "GamesList",
@@ -68,7 +70,7 @@ export default {
 
 .game-image {
     width: 100%;
-    height: 70%;
+    height: 250px;
     border-radius: 8px;
 }
 
