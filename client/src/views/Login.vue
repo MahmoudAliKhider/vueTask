@@ -1,8 +1,5 @@
 <template>
   <div class="login-container">
-    <div v-if="showAlert" class="alert" :class="{ 'success': isSuccess, 'error': !isSuccess }">
-      {{ alertMessage }}
-    </div>
 
     <div class="headImg">
       <img src="../assets/images/conn.png" alt="l" />
@@ -59,9 +56,6 @@ import { RouterLink } from 'vue-router';
 
 const email = ref('')
 const password = ref('')
-const showAlert = ref(false)
-const isSuccess = ref(false)
-const alertMessage = ref('')
 
 const login = async () => {
   try {
