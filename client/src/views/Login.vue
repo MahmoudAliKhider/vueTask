@@ -66,7 +66,6 @@ const login = async () => {
     if (response.data && response.data.token) {
       localStorage.setItem('token', response.data.token)
       router.push('/');
-      window.alert('Login successful');
     } else {
       console.error(response.data);
       window.alert(`${response.data}`)

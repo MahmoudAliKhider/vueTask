@@ -16,7 +16,7 @@ if (!isLoggedIn.value || undefined) {
 
 <template>
 <div>
-   <Header :isLoggedIn="isLoggedIn" />
+   <!-- <Header :isLoggedIn="isLoggedIn" /> -->
     <RouterView />
   </div>
 </template>

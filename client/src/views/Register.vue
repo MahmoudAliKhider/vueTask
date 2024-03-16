@@ -74,7 +74,6 @@ const register = async () => {
     if (response.data && response.data.token) {
       localStorage.setItem('token', response.data.token)
       router.push('/');
-      window.alert('register successful');
     } else {
       console.error(response.data);
       window.alert(`${response.data}`)
@@ -93,7 +92,7 @@ const register = async () => {
 .login-container {
   background-color: #B1B1C6;
   width: 100%;
-  padding: 80px;
+  padding: 50px;
 }
 
 .container {
