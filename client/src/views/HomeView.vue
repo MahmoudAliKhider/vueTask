@@ -219,7 +219,7 @@ loadData();
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 40px;
+    padding: 34px;
 
 }
 
@@ -268,5 +268,31 @@ loadData();
     margin: 5px 0;
     font-size: 14px;
     padding: 4px;
+}
+
+@media screen and (max-width: 1200px) {
+    /* Adjust styles for smaller screens */
+    .games-row {
+        padding: 20px;
+    }
+
+    .game-card {
+        width: calc(45% - 10px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Further adjust styles for even smaller screens */
+    .games-row {
+        padding: 10px;
+    }
+
+    .game-card {
+        width: calc(100% - 10px);
+    }
+
+    .game-card h2 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
 }
 </style>
