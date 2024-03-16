@@ -1,5 +1,9 @@
 <template>
   <div class="login-container">
+    <div v-if="showAlert" class="alert" :class="{ 'success': isSuccess, 'error': !isSuccess }">
+      {{ alertMessage }}
+    </div>
+
     <div class="headImg">
       <img src="../assets/images/conn.png" alt="l" />
     </div>
@@ -55,6 +59,9 @@ import { RouterLink } from 'vue-router';
 
 const email = ref('')
 const password = ref('')
+const showAlert = ref(false)
+const isSuccess = ref(false)
+const alertMessage = ref('')
 
 const login = async () => {
   try {
@@ -62,12 +69,21 @@ const login = async () => {
       email: email.value,
       password: password.value
     })
-    localStorage.setItem('token', response.data.token)
-    router.push('/');
+    if (response.data && response.data.token) {
+      localStorage.setItem('token', response.data.token)
+      router.push('/');
+      window.alert('Login successful');
+    } else {
+      console.error(response.data);
+      window.alert(`${response.data}`)
+    }
   } catch (error) {
-    console.error(error.response.data)
+    console.error(error.response.data);
+    window.alert(`${error.response.data}`)
+
   }
 }
+
 
 </script>
 
@@ -183,7 +199,7 @@ button:hover {
   margin-top: 2%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .login-container {
     background-color: #B1B1C6;
     width: 100%;
@@ -218,4 +234,33 @@ button:hover {
     filter: drop-shadow(3px 1px 3px #1E3050);
   }
 }
+
+@media screen and (min-width: 850px) and (max-width: 1130px) {
+  .login-container {
+    background-color: #B1B1C6;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .login-left {
+    width: 80%;
+    margin: 20px;
+    margin-top: 20%;
+  }
+
+  .login-right img {
+    width: 90%;
+  margin-left: 6%;
+  margin-top: 10%;
+  }
+
+  .headImg img {
+    width: 120px;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    filter: drop-shadow(3px 1px 3px #1E3050);
+  }
+}
+
 </style>

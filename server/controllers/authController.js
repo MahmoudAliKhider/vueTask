@@ -36,9 +36,6 @@ exports.login = asyncHandler(async (req, res) => {
     if (!(email && password)) {
         return res.status(400).send("All input is required");
     }
-    if (!user) {
-        return res.status(400).send("Invalid email!");
-    }
 
     if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
         return res.send("Incorrect email or password").status(401);

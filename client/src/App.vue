@@ -8,7 +8,7 @@ const isLoggedIn = computed(() => {
   return localStorage.getItem('token') !== null;
 });
 
-if (!isLoggedIn.value) {
+if (!isLoggedIn.value || undefined) {
   router.push('/login');
 }
 
