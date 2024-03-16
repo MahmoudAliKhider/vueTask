@@ -1,9 +1,9 @@
 <template>
+    <!-- <Header /> -->
     <div class="con">
         <RouterLink to="/">
             <h1 class="gameText">Top Games</h1>
         </RouterLink>
-
         <div v-if="loading">Loading...</div>
         <div v-else>
             <div class="games-row">
@@ -16,11 +16,12 @@
                             </p>
                         </div>
                         <div>
-                            <p class="metacritic" :style="{ backgroundColor: getBackgroundColor(game.metacritic)}">{{game.metacritic }}</p>
+                            <p class="metacritic" :style="{ backgroundColor: getBackgroundColor(game.metacritic) }">
+                                {{ game.metacritic }}</p>
                         </div>
                     </div>
                     <div class="title">
-                       <h1>{{ game.name }}</h1>
+                        <h1>{{ game.name }}</h1>
                     </div>
 
                 </div>
@@ -33,6 +34,7 @@
 import { ref } from 'vue';
 import axios from "axios";
 import { RouterLink } from 'vue-router';
+import Header from './Header.vue';
 
 const getPlatformIcon = (platformName) => {
     switch (platformName.toLowerCase()) {
@@ -125,6 +127,7 @@ loadData();
     width: 100%;
     height: 230px;
     border-radius: 8px;
+    object-fit: cover;
 }
 
 .game-card h2 {
