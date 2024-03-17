@@ -1,6 +1,8 @@
-# server side
+## to download
+##### git clone https://github.com/MahmoudAliKhider/vueTask.git
+### server side
 ` npm install`
 `npm start`
-# client side
+### client side
 ` npm install`
 ` npm run dev`
