@@ -2,5 +2,5 @@
 ` npm install`
 `npm start`
 # client side
-## npm install
-## npm run dev
+` npm install`
+` npm run dev`
