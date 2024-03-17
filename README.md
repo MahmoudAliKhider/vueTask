@@ -1,8 +1,6 @@
 # server side
-` bash
-    npm install
-    npm start
-`
+` npm install`
+`npm start`
 # client side
 ## npm install
 ## npm run dev
